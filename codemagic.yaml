@@ -12,10 +12,11 @@ workflows:
           mkdir -p assets/animations
       - name: Dependencies
         script: flutter pub get
-      - name: Build APK
-        script: flutter build apk --release find . -name "*.apk" -type f
+       - name: Construire l'APK Release
+        script: flutter build apk --release --build-name=1.0.0 --build-number=1
+
     artifacts:
-      - "**/*.apk"
+      - build/app/outputs/flutter-apk/*.apk
     publishing:
       email:
         recipients:
