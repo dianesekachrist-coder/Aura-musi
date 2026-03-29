@@ -15,7 +15,8 @@ workflows:
       - name: Build APK
         script: flutter build apk --release --build-name=1.0.0 --build-number=1
     artifacts:
-      - build/app/outputs/flutter-apk/*.apk
+      - build/app/outputs/flutter-apk/app-release.apk
+      - build/app/outputs/apk/release/app-release.apk
     publishing:
       email:
         recipients:
