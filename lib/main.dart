@@ -4,7 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:on_audio_query/on_audio_query.dart';
+import 'package:flutter_audio_query/flutter_audio_query.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:audio_session/audio_session.dart';
 
@@ -44,10 +44,10 @@ enum RepMode { none, one, all }
 
 class MusicState extends ChangeNotifier {
   final AudioPlayer player = AudioPlayer();
-  final OnAudioQuery _query = OnAudioQuery();
+  final FlutterAudioQuery _query = FlutterAudioQuery();
 
-  List<SongModel> songs = [];
-  SongModel? current;
+  List<SongInfo> songs = [];
+  SongInfo? current;
   int index = 0;
   bool playing = false;
   bool loading = false;
