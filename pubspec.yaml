@@ -1,0 +1,27 @@
+name: aura_music
+description: Aura Music Player
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  just_audio: ^0.9.36
+  audio_session: ^0.1.18
+  permission_handler: ^11.3.0
+  on_audio_query: ^2.9.0
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^6.0.0
+
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/animations/

@@ -1,0 +1,25 @@
+workflows:
+  aura-music-android:
+    name: Aura Music - APK
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      java: 17
+    scripts:
+      - name: Créer assets
+        script: |
+          mkdir -p assets/images
+          mkdir -p assets/animations
+      - name: Dependencies
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release --build-name=1.0.0 --build-number=1
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+    publishing:
+      email:
+        recipients:
+          - dianesekachrist@gmail.com
+        notify:
+          success: true
+          failure: true
