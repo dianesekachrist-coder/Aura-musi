@@ -13,7 +13,7 @@ workflows:
       - name: Dependencies
         script: flutter pub get
       - name: Build APK
-        script: flutter build apk --release --build-name=1.0.0 --build-number=1
+        script: flutter build apk --release find . -name "*.apk" -type f
     artifacts:
       - "**/*.apk"
     publishing:
